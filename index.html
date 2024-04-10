@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Pholio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/6bb7fd1f37.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!-- -----------------------front page(home page)------------------------- -->
+    <div id="header">
+       <div class="container">
+           <nav>
+              <img src="final logo.png" class="logo">
+              <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                 <li><a href="#about">About</a></li>
+                 <li><a href="#services">Services</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+              </ul>
+              <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+           </nav>
+           <div class="header-text">
+                <p>Entry-level Software Developer</p>
+                <h1>hi,I'm <span>Suveen Ram</span></h1>
+           </div>
+       </div>
+    </div>
+    <!-- ----------------about -------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="suveen background.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p> Strong in design and integration with intuitive problem-solvin skills. Proficient in JAVA,C and CPP. Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions. Looking  to start the career as a entry-level software engineer with a reputed firm driven by technology.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span><br>Backend technology</li>
+                            <li><span>CPP</span><br>Backend technology</li>
+                            <li><span>HTML,CSS and Javascript</span><br>Designing a Web/App Interfaces</li>
+                            <li><span>C</span><br>Backend technology</li>
+                        </ul>
+                    </div>
+                    <!-- ---Experience--- -------->
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023(Jun)-2024(feb)</span><br>GET at Salcomp Manufacturing</li>
+                        </ul>
+                    </div>
+                    <!------------- ---Education----- -->
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>B.E-ECE(2019-2023)</span><br>Panimalar Engineering College</li>
+                            <li><span>HSC(2019)</span><br>Velammal Vidyalaya</li>
+                            <li><span>SSLC(2017)</span><br>Velammal Vidyalaya</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------Services------------ -->
+    <div class="services" id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Web Design</h2>
+                    <p>Create a interactive and creative web design by using frontend technology like html,CSS and Javascript.
+                    </p>
+                    <a href="#">learn msore</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-code"></i>
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Software Developer</h2>
+                    <p>Strong in Programming languages like Java,CPP and C.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   <!-- ------------- contact--------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>suveenram@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 7708158518</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/suveen-ram-7a8053217/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/suveenram/java"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://wa.me/qr/SMXSYUJPZVILO1"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <a href="Suveen Ram Resume (4) (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+    <!----- ---------------------------form------- ------------------->
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------for sidebar and close in small screen---------- -->
+    <script>
+        var sidemnu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemnu.style.right="0px";
+        }
+        function closemenu(){
+            sidemnu.style.right="-200px";
+        }
+    </script>
+    <!-- -----------------form to store in spreadsheet(code in online)--------------------- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx6cC8qEy97WAj0KWe6PrvbRyQnWQH7m0gzGCJkvGVOk9f66EOK3WBriKAPYC3kWD0/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
